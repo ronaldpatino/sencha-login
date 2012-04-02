@@ -5,6 +5,8 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
+    controllers: ["Main", "Table"],
+
     name: 'ime',
 
     requires: [
@@ -12,6 +14,8 @@ Ext.application({
     ],
 
     views: ['Main'],
+	
+	appFolder: 'app',
 
     icon: {
         57: 'resources/icons/Icon.png',
@@ -29,6 +33,7 @@ Ext.application({
 
         // Initialize the main view
         Ext.Viewport.add(Ext.create('ime.view.Main'));
+		
     },
 
     onUpdated: function() {
