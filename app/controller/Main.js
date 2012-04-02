@@ -2,7 +2,8 @@ Ext.define('ime.controller.Main', {
     extend: 'Ext.app.Controller',
 	
     config: {
-        refs: {            
+        refs: {  
+			mainPanel: 'mainpanel'
         },
         control: {
         }
@@ -10,6 +11,14 @@ Ext.define('ime.controller.Main', {
     
     //called when the Application is launched, remove if not needed
     launch: function(app) {
-        
-    }
+		console.log('ime.controller.Main Initialized');
+    },
+	
+	index: function(){
+		// TODO check if view exists
+		ime.view.Main = new ime.view.Main();		
+
+	}
+	
+	
 });
