@@ -37,23 +37,8 @@ Ext.define("ime.view.LoginForm", {
 				text: 'Send',
 				ui: 'confirm',
 				formBind: true,	 
-				handler: function(btn, event) {							
-					var myForm = btn.up('formpanel');							
-					
-					myForm.submit({
-						waitTitle:'Connecting', 
-						waitMsg:'Sending data...',
-						success: function() {
-							Ext.Msg.alert('Form Values', JSON.stringify(myForm.getValues(), null, 2))
-						},
-						failure: function(form, action) {																														
-							obj = Ext.JSON.decode(action.responseText); 
-							Ext.Msg.alert('Login Failed!', obj.message); 
-							
-						}
-					});
-					
-				}
+				id:'doLogin',
+				action: 'doLogin'
 			}			
 		]
 	}

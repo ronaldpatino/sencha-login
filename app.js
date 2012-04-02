@@ -5,15 +5,17 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
-    controllers: ["Main", "Table"],
-
-    name: 'ime',
+    controllers: ["LoginController", "Main", "Table"],
+	
+	views: ['Main'],
+    
+	name: 'ime',
 
     requires: [
         'Ext.MessageBox'
     ],
 
-    views: ['Main'],
+    
 	
 	appFolder: 'app',
 
@@ -32,7 +34,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('ime.controller.Main'));
+        Ext.Viewport.add(Ext.create('ime.view.Main'));
 		
     },
 
