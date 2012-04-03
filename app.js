@@ -5,6 +5,8 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
+    models: ["User"],
+
     controllers: ["LoginController", "Main", "TablaController"],
 	
 	views: ['Main','Tabla'],

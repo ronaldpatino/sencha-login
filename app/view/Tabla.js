@@ -1,6 +1,5 @@
 Ext.define('ime.view.Tabla', {
-    extend: 'Ext.Panel',
-    xtype: 'tablalist',
+    extend: 'Ext.List',    
 	id: 'usuarioslist',	       
 		
 	config: {
@@ -12,14 +11,29 @@ Ext.define('ime.view.Tabla', {
 				xtype: 'titlebar',
 				title: 'Mon App'
 			},
-			/*
+			
 			{
 				xtype: 'list',
-				itemTpl: '<div class="contact">{firstName} <strong>{lastName}</strong></div>',
-			},*/
-		    {            
-				html: '<h2>Users List</h2> <p>This ough to show the users list.</p>',
-            }
+				fullscreen: true,
+
+				store: {
+					fields: ['name'],
+					data: [
+						{name: 'Cowper'},
+						{name: 'Everett'},
+						{name: 'University'},
+						{name: 'Forest'}
+					]
+				},
+
+				itemTpl: '{name}',
+
+				listeners: {
+					select: function(view, record) {
+						Ext.Msg.alert('Selected!', 'You selected ' + record.get('name'));
+					}
+				}				
+			}
         ]
 
 	}
