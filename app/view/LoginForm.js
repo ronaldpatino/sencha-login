@@ -4,7 +4,7 @@ Ext.define("ime.view.LoginForm", {
 	title: 'Login',		
 	iconCls: 'user',				
 	layout: 'vbox',                				
-    requires: ['Ext.TitleBar', 'Ext.form.Panel', 'Ext.form.FieldSet', 'Ext.field.Password'],
+    requires: ['Ext.TitleBar', 'Ext.form.Panel', 'Ext.form.FieldSet', 'Ext.field.Password', 'Ext.List'],
 	
     config: {
 		url: 'http://localhost:8080/rest/user/login/',
