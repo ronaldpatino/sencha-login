@@ -15,20 +15,15 @@ Ext.define('ime.view.Tabla', {
 			{
 				xtype: 'list',
 				fullscreen: true,
-
-				store: {
-					fields: ['name'],
-					data: [
-						{name: 'Cowper'},
-						{name: 'Everett'},
-						{name: 'University'},
-						{name: 'Forest'}
-					]
+				requires: ['ime.store.Users'],
+				config: {
+					grouped: true,
+					itemTpl: '{nombre}',
+					store: 'Users',
+					onItemDisclosure: true
 				},
-
-				itemTpl: '{name}',
-
 				listeners: {
+				
 					select: function(view, record) {
 						Ext.Msg.alert('Selected!', 'You selected ' + record.get('name'));
 					}

@@ -11,6 +11,8 @@ Ext.application({
 	
 	views: ['Main','Tabla'],
     
+	stores: ['Users'],
+	
 	name: 'ime',
 
     requires: [
