@@ -18,12 +18,11 @@ Ext.define('ime.controller.LoginController', {
     },
 	
 	doLogin: function() {
-        var loginForm   = this.getLoginForm();
-		loginForm.submit({
-						waitTitle:'Loggin in...', 
-						waitMsg:'Sending data...',
-						success: function() {
-							Ext.Msg.alert('Form Values', JSON.stringify(loginForm.getValues(), null, 2))
+        var loginForm   = this.getLoginForm();						
+		loginForm.submit({						
+						waitMsg:'Sending data...',						
+						success: function(form, result) {
+							ime.app.getController('ime.controller.TablaController').index();							
 						},
 						failure: function(form, action) {																														
 							obj = Ext.JSON.decode(action.responseText); 
@@ -31,5 +30,5 @@ Ext.define('ime.controller.LoginController', {
 							
 						}
 					});		
-    }		
+    }	
 });
