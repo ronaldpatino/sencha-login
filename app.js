@@ -5,9 +5,9 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
-    controllers: ["LoginController", "Main", "Table"],
+    controllers: ["LoginController", "Main", "TablaController"],
 	
-	views: ['Main'],
+	views: ['Main','Tabla'],
     
 	name: 'ime',
 
@@ -33,13 +33,8 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
-        // Initialize the main view
-        //Ext.Viewport.add(Ext.create('ime.view.Main'));
-		this.dispatch({
-            controller: 'ime.controller.Main',
-            action: 'index'
-        });
-		
+        // Call the main controller        
+		this.getApplication().getController('ime.controller.Main').index();		
     },
 
     onUpdated: function() {
