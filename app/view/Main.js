@@ -1,25 +1,14 @@
 Ext.define('ime.view.Main', {
-    extend: 'Ext.tab.Panel',
+    extend: 'Ext.Panel',
     xtype: 'mainpanel',
 	requires: ['ime.view.LoginForm'],
     config: {
         fullscreen: true,
-        
-        tabBar: {
-            docked: 'bottom',
-            layout: {
-                pack: 'center'
-            }
-        },
-
-        defaults: {
-            scrollable: true
-        },
-
+		layout: 'card',
+		cardAnimation: 'cube',
         items: [
-            {
-                title: 'Login',
-                iconCls: 'user',
+            {                              
+				// reference to the login form view, it is an item of the current view
                 xtype : 'loginform'                 
             }
         ]
