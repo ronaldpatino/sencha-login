@@ -11,12 +11,12 @@ Ext.define('ime.view.UsersList', {
                 align: 'center',
                 pack: 'center'
             }
-        }]		
-    },
-	listeners: {
-				
-		select: function(view, record) {
-			Ext.Msg.alert('Selected!', 'You selected ' + record.get('username'));
+        }],
+		listeners: {				
+			select: function(view, record) {
+				Ext.Msg.alert('Selected!', 'You selected ' + record.get('username'));
+			}
 		}
-	}
+    }
+	
 });
