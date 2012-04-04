@@ -7,9 +7,13 @@ Ext.define("ime.view.LoginForm", {
     requires: ['Ext.TitleBar', 'Ext.form.Panel', 'Ext.form.FieldSet', 'Ext.field.Password', 'Ext.List'],
 	
     config: {
-		url: 'http://localhost:8080/rest/user/login/',
-		method: 'POST',	
 		fullscreen: true,
+		masked: {				
+			message: 'Loggin in..',
+			xtype: 'loadmask',
+			hidden: true
+		},								
+
 		items: [
 			{
 				docked: 'top',
@@ -34,7 +38,7 @@ Ext.define("ime.view.LoginForm", {
 			},
 			{
 				xtype: 'button',
-				text: 'Send',
+				text: 'Login',
 				ui: 'confirm',
 				formBind: true,	 
 				id:'doLogin',

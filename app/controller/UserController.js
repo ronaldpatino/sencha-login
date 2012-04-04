@@ -25,6 +25,7 @@ Ext.define('ime.controller.UserController', {
 		ime.view.UsersPanel = new ime.view.UsersPanel();										    
 		// And set the active item in the view		
 		ime.view.Main.setActiveItem('userspanel', { type: 'cube', direction: 'right' });
+		
 		console.log('ime.controller.TablaController.index() called');
 	}
 	
