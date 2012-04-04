@@ -22,7 +22,7 @@ Ext.define('ime.controller.LoginController', {
 		loginForm.submit({						
 						waitMsg:'Sending data...',						
 						success: function(form, result) {
-							ime.app.getController('ime.controller.TablaController').index();							
+							ime.app.getController('ime.controller.UserController').index();							
 						},
 						failure: function(form, action) {																														
 							obj = Ext.JSON.decode(action.responseText); 

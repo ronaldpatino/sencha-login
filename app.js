@@ -5,11 +5,11 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
-    models: ["User"],
+    models: ['User'],
 
-    controllers: ["LoginController", "Main", "TablaController"],
+    controllers: ['LoginController', 'MainController', 'UserController'],
 	
-	views: ['Main','Tabla', 'UsersList'],
+	views: ['Main','UsersPanel', 'UsersList'],
     
 	stores: ['Users'],
 	
@@ -18,8 +18,6 @@ Ext.application({
     requires: [
         'Ext.MessageBox'
     ],
-
-    
 	
 	appFolder: 'app',
 
@@ -36,9 +34,8 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
-
         // Call the main controller        
-		this.getApplication().getController('ime.controller.Main').index();		
+		this.getApplication().getController('ime.controller.MainController').index();		
     },
 
     onUpdated: function() {
