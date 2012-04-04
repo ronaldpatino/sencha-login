@@ -19,8 +19,9 @@ Ext.define('ime.controller.TablaController', {
 	index: function() {		
 		//Instanciate the view
 		
-		ime.view.Tabla = new ime.view.Tabla();							
-		ime.store.Users = new ime.store.Users();		
+		Ext.create('ime.store.Users');
+		//ime.store.Users = new ime.store.Users();	
+		ime.view.Tabla = new ime.view.Tabla();										    
 		// And set the active item in the view		
 		ime.view.Main.setActiveItem('usuarioslist', { type: 'cube', direction: 'right' });
 		console.log('ime.controller.TablaController.index() called');
