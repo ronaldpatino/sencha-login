@@ -1,5 +1,6 @@
-Ext.define('ime.controller.TablaController', {
-    extend: 'Ext.app.Controller',
+Ext.define('ime.controller.UserController', {
+    
+	extend: 'Ext.app.Controller',
     
     config: {
         
@@ -19,11 +20,11 @@ Ext.define('ime.controller.TablaController', {
 	index: function() {		
 		//Instanciate the view
 		
-		Ext.create('ime.store.Users');
-		//ime.store.Users = new ime.store.Users();	
-		ime.view.Tabla = new ime.view.Tabla();										    
+		//Ext.create('ime.store.Users');
+		ime.store.Users = new ime.store.Users();	
+		ime.view.UsersPanel = new ime.view.UsersPanel();										    
 		// And set the active item in the view		
-		ime.view.Main.setActiveItem('usuarioslist', { type: 'cube', direction: 'right' });
+		ime.view.Main.setActiveItem('userspanel', { type: 'cube', direction: 'right' });
 		console.log('ime.controller.TablaController.index() called');
 	}
 	

@@ -1,6 +1,6 @@
-Ext.define('ime.view.Tabla', {
+Ext.define('ime.view.UsersPanel', {
     extend: 'Ext.Panel',    
-	id: 'usuarioslist',	       
+	id: 'userspanel',	       
 		
 	config: {
         fullscreen: true,

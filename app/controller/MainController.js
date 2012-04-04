@@ -1,4 +1,4 @@
-Ext.define('ime.controller.Main', {
+Ext.define('ime.controller.MainController', {
     extend: 'Ext.app.Controller',
 	
     config: {
