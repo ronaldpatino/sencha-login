@@ -9,7 +9,7 @@ Ext.application({
 
     controllers: ["LoginController", "Main", "TablaController"],
 	
-	views: ['Main','Tabla'],
+	views: ['Main','Tabla', 'UsersList'],
     
 	stores: ['Users'],
 	
